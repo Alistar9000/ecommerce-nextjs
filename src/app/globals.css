@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+  box-sizing: border-box;
+}
+.scrollbar-hide::-webkit-scrollbar{
+   display: none;  
+   
+}
+
+@font-face {
+  font-family: byekan;
+  font-display: swap;
+  src: url("/fonts/IRANYekan.ttf");
+}
+
+body{
+    direction: rtl;
+    font-family: 'byekan';
+}
