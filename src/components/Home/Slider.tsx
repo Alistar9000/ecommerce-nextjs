@@ -247,14 +247,16 @@ type ref = ElementRef<"div">;
 
 const Slider = () => {
   const [current, setCurrent] = useState(0);
+  const [windowWidth, setWindowWidth] = useState<number | null>(null);
   const scrollRef = useRef<ref>(null);
   const scrollRefChild = useRef<ref>(null);
 
   useEffect(() => {
+    setWindowWidth(window.innerWidth)
     const cardWidth = scrollRefChild.current
       ? scrollRefChild.current.offsetWidth
       : 0;
-    const sideWidth = (window.innerWidth - cardWidth) / 2    
+    const sideWidth =windowWidth ? (windowWidth - cardWidth) / 2 : 0    
     const startPoint = -cardWidth + sideWidth ;
 
     if (scrollRef.current && scrollRefChild.current) {
