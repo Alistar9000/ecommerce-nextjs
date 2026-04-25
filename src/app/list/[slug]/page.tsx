@@ -21,7 +21,7 @@ export default  function SlugPage({params,searchParams}:{params:{slug:string},se
     <label htmlFor="name_chckbox">name</label>
     <input type="checkbox" checked={'name_chckbox' === check} onChange={handleCheckbox} name="name_chckbox" id="" />
    </div>
-   {check === 'id_chckbox' ? searchResults_id.map(e=><p>{e.id} {e.name}</p>): searchResults_name.map(e=><p>{e.id} {e.name}</p>)}
+   {check === 'id_chckbox' ? searchResults_id.map(e=><p key={e.id}>{e.id} {e.name}</p>): searchResults_name.map(e=><p key={e.id}>{e.id} {e.name}</p>)}
    </div>
 } 
 type Items = {

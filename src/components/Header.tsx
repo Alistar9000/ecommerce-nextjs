@@ -9,14 +9,11 @@ import NavIcons from './NavIcons'
 
 const Header = () => {
 
-useEffect(() => {
-  document.body.scrollTop = 300
-  console.log('body-scrolltop: ', document.body.scrollTop)
-}, [])
+
 
 
   return (
-    <div  className={`${document.body.scrollTop < 300 ? 'h-[168px]' : 'h-[150px]'} transition-all duration-300 z-20 fixed top-0 right-0 left-0 bg-white px-4 border-b-2`}>
+    <div  className={'h-[168px] transition-all duration-300 z-20 fixed top-0 right-0 left-0 bg-white px-4 border-b-2'}>
       {/* MOBILE SCREEN */}
        <div className="flex md:hidden justify-between items-center h-full">
         <Link href={'/'}>

@@ -309,7 +309,7 @@ const Slider = () => {
     <div className="overflow-auto hidden lg:block">    
       <div className="flex">
         {slides.map((item) => (
-          <Link href={"/"} target="_blank">
+          <Link key={item.id} href={"/"} target="_blank">
             <div
               style={{ transform: `translateX(${current * 100}vw)` }}
               className="relative transition-all duration-300 h-[400px] w-screen "
@@ -332,7 +332,7 @@ const Slider = () => {
       <div  className="flex">
         {slides_mobile.map((item) => (
           
-            <Link href={"/"} target="_blank" className="">
+            <Link key={item.id} href={"/"} target="_blank" className="">
              <div className="w-[calc(100vw-36px)]  snap-center h-[160px] ml-2">
 
               <div ref={scrollRefChild} className="relative  overflow-hidden rounded-md w-full h-full  ">
