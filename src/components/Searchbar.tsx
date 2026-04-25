@@ -8,8 +8,7 @@ import React from 'react'
 const Searchbar = () => {
 
   const router = useRouter()
-  const url = usePathname()
-  const searchParams = useSearchParams()
+ 
   const handleSearch = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     

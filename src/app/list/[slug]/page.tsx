@@ -1,8 +1,8 @@
 'use client'
 
-import { ReactElement, ReactHTML, ReactHTMLElement, ReactNode, useState } from "react"
+import { useState } from "react"
 
-export default  function SlugPage({params,searchParams}:{params:{slug:string},searchParams:{name:string}}) {
+export default  function SlugPage({params,searchParams}:{params:{slug:string},searchParams:{name?:string}}) {
     const {slug} = params
     const {name} = searchParams
     const [searchInput,setSearchInput] = useState('')

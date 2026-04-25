@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-const  ListPage = ({searchParams}:{searchParams:{name:Promise<string>}}) => {
+const  ListPage = ({searchParams}:{searchParams:{name?:string}}) => {
      const name = searchParams.name
 
   return (
