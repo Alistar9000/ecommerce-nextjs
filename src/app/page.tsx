@@ -7,8 +7,8 @@ import Topbar from "@/components/Home/Topbar"
 const HomePage = () => {
   return (
     <div className='grow flex flex-col top-[168px] relative gap-y-4 max-w-full shrink-0 items-center'>
-      {/* <Topbar className={'lg:block hidden'} /> */}
-      {/* <Slider /> */}
+      <Topbar className={'lg:block hidden'} />
+      <Slider />
       <div className="relative z-10 w-full bg-white ">
 
       <AfterSlider />  
