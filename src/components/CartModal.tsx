@@ -4,7 +4,7 @@ import React from "react";
 const CartModal = ({setShow}:{setShow:(param:string)=>void}) => {
   const cartItems = true;
   return (
-    <div onMouseOver={()=>setShow('cart')} onMouseLeave={()=>setShow('')} className="w-max absolute top-full bg-white flex flex-col gap-6 z-20 rounded-md p-4 left-0  shadow-[0_3px_10px_rgba(0,0,0,0.2)]">
+    <div dir="rtl" onMouseOver={()=>setShow('cart')} onMouseLeave={()=>setShow('')} className="w-max absolute top-full bg-white flex flex-col gap-6 z-20 rounded-md p-4 left-0  shadow-[0_3px_10px_rgba(0,0,0,0.2)]">
       {!cartItems ? (
         <div className="">Cart is empty</div>
       ) : (
